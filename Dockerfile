@@ -1,11 +1,11 @@
-FROM ubuntu:latest
+FROM ubuntu:14.04
 
 MAINTAINER kiwenlau <kiwenlau@gmail.com>
 
 # install dependencies for compiling hadoop
 RUN apt-get update && \
     apt-get install -y wget \
-                       openjdk-7-jdk \
+                       openjdk-12-jdk \
                        libprotobuf-dev \
                        protobuf-compiler \
                        maven \
