@@ -14,7 +14,7 @@ RUN apt-get update &&\
                        pkg-config \
                        libssl-dev \
                        zlib1g-dev \
-                       gcc-4.3 \
+                       gcc \
                        automake \
                        autoconf \
                        make
