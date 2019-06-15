@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER Julio Perez <perezduranjulio@gmail.com>
 
 # install dependencies for compiling hadoop
-RUN apt-get update  && apt-get install -y software-properties-common && add-apt-repository ppa:jonathonf/gcc-7.1 && apt-get update\
+RUN apt-get update \
     apt-get install -y wget \
                        openjdk-11-jdk \
                        libprotobuf-dev \
@@ -14,7 +14,7 @@ RUN apt-get update  && apt-get install -y software-properties-common && add-apt-
                        pkg-config \
                        libssl-dev \
                        zlib1g-dev \
-                       gcc-7 \
+                       gcc-4.3 \
                        automake \
                        autoconf \
                        make
