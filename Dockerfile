@@ -3,9 +3,9 @@ FROM ubuntu:latest
 MAINTAINER Julio Perez <perezduranjulio@gmail.com>
 
 # install dependencies for compiling hadoop
-RUN apt-get update && \
+RUN add-apt-repository ppa:jonathonf/gcc-7.1 && apt-get update \
     apt-get install -y wget \
-                       openjdk-default-jdk \
+                       openjdk-11-jdk \
                        libprotobuf-dev \
                        protobuf-compiler \
                        maven \
@@ -14,7 +14,7 @@ RUN apt-get update && \
                        pkg-config \
                        libssl-dev \
                        zlib1g-dev \
-                       llvm-gcc \
+                       gcc-7 \
                        automake \
                        autoconf \
                        make
